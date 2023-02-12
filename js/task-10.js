@@ -3,6 +3,7 @@ const createBtn = document.querySelector("button[data-create]");
 const destroyBtn = document.querySelector("button[data-destroy]");
 const boxesEl = document.querySelector('#boxes')
 
+destroyBtn.addEventListener('click', eraseContent)
 
 createBtn.addEventListener("click", () => {
 
@@ -21,15 +22,9 @@ createBtn.addEventListener("click", () => {
   }
 })
 
-destroyBtn.addEventListener('click', () => {
+function eraseContent(event) {
   boxesEl.innerHTML = ""
-})
-
-
-
-
-
-
+}
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;

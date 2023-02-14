@@ -8,7 +8,7 @@ const ingredients = [
 ];
 
 const ingredientsEl = document.querySelector('#ingredients')
-
+const items = []
 
 ingredients.forEach(ingridient => {
   
@@ -17,7 +17,9 @@ ingredients.forEach(ingridient => {
   name.textContent = ingridient;
   name.classList.add('item')
 
-  ingredientsEl.append(name)
+  items.push(name)
 }
 )
+
+ingredientsEl.append(...items)
 

@@ -7,7 +7,7 @@ inputEl.addEventListener('blur', event => {
     event.currentTarget.classList.remove('valid');
 
 
-    if (event.currentTarget.value.length == lengthValue) {
+    if (event.currentTarget.value.length == lengthValue) { // не розумію чого не працює строге порівнняння "==="?
         event.currentTarget.classList.add("valid")
     } else {
         event.currentTarget.classList.add('invalid')
